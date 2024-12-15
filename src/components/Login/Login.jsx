@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthContext"; 
 import { auth, provider } from "./config"; 
 import { signInWithPopup } from "firebase/auth";
-import { assets } from "../../assets/assets"; 
+import { assets } from "../../Assets/assets"; 
 import "./Login.css";
 
 const Login = () => {
