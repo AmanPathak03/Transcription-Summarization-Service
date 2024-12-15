@@ -1,4 +1,4 @@
-#🎧 Transcription and Summarization Service 🎧
+🎧 Transcription and Summarization Service 🎧
 
 ##Overview
 The Transcription and Summarization Service is a web-based application that allows users to upload audio files, generate transcriptions, and receive concise text summaries. The platform provides features for downloading audio files, viewing transcriptions, and accessing summaries seamlessly.
