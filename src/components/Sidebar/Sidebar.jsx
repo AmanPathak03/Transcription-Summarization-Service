@@ -1,7 +1,7 @@
 // Sidebar.jsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { assets } from '../../assets/assets'; 
+import { assets } from '../../Assets/assets'; 
 import './Sidebar.css'; 
 import { Link } from 'react-router-dom';
 
