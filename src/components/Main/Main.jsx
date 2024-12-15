@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios'; // Import axios for API calls
-import { assets } from '../../assets/assets';
+import { assets } from '../../Assets/assets';
 import { useAuth } from "../../components/AuthContext";
 
 import './Main.css';
