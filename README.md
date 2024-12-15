@@ -26,14 +26,15 @@ Ensures all files are associated with the authenticated user.
 # Technology Stack 🛠
 
 ## Frontend
--React.js: Component-based UI.
+- React.js: Component-based UI.
 
--CSS3: For responsive and clean UI design.
+- CSS3: For responsive and clean UI design.
 
--Vite: For fast and optimized frontend development.
+- Vite: For fast and optimized frontend development.
 
 ## Backend
 -FastAPI: Handles API requests for audio upload, transcription, and summarization.
+
 -MongoDB: Stores user data, transcriptions, and summaries.
 
 ## APIs and Libraries
