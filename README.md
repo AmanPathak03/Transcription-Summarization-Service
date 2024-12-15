@@ -4,55 +4,55 @@
 The Transcription and Summarization Service is a web-based application that allows users to upload audio files, generate transcriptions, and receive concise text summaries. The platform provides features for downloading audio files, viewing transcriptions, and accessing summaries seamlessly.
 
 ## Features 🚀
-- Audio File Upload:
+- **Audio File Upload:**
 Users can upload audio files for transcription and summarization.
 
-- Transcriptions:
+- **Transcriptions:**
 Converts speech to text using advanced transcription tools.
 Displays transcriptions with timestamps.
 Provides an option to download transcriptions.
 
-- Summaries:
+- **Summaries:**
 Generates concise summaries of transcriptions.
 Useful for quick understanding of lengthy audio content.
 
-- Audio Management:
+- **Audio Management:**
 View and download uploaded audio files.
 
-- User Authentication:
+- **User Authentication:**
 Secure login for personalized access.
 Ensures all files are associated with the authenticated user.
 
 # Technology Stack 🛠
 
 ## Frontend
-- React.js: Component-based UI.
+- **React.js:** Component-based UI.
 
-- CSS3: For responsive and clean UI design.
+- **CSS3:** For responsive and clean UI design.
 
-- Vite: For fast and optimized frontend development.
+- **Vite:** For fast and optimized frontend development.
 
 ## Backend
-- FastAPI: Handles API requests for audio upload, transcription, and summarization.
+- **FastAPI:** Handles API requests for audio upload, transcription, and summarization.
 
-- MongoDB: Stores user data, transcriptions, and summaries.
+- **MongoDB:** Stores user data, transcriptions, and summaries.
 
 ## APIs and Libraries
 - OpenAI GPT-4o Mini API: Generates transcriptions and summaries.
 - Google Cloud Storage: Manages and serves uploaded audio files.
 
 # Usage 📝
-- Register/Login:
+- **Register/Login:**
 Log in using your credentials to access your files.
 
-- Upload Audio:
+- **Upload Audio:**
 Upload an audio file for transcription and summarization.
 
-- Access Files:
+- **Access Files:**
 View uploaded audio files in the Audio Files section.
 Download audio files or transcriptions using the Download button.
 
-- View Transcriptions & Summaries:
+- **View Transcriptions & Summaries:**
 Access generated transcriptions with timestamps.
 View summaries for a quick overview.
 
