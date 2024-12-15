@@ -1,0 +1,109 @@
+/* Files list container */
+.main-container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.files-list {
+  display: flex;
+  flex-direction: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* File section (Transcriptions and Summaries) */
+.file-section {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 600px;
+}
+
+.files-list > .file-section {
+  height: 100%;
+}
+
+.download-btn {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #225ea8;
+}
+
+.file-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.file-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(11, 113, 246, 0.831);
+}
+
+.file-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #2d3748;
+}
+
+.file-card p {
+  font-size: 16px;
+  color: #4a5568;
+  margin: 10px 0;
+}
+
+.file-card .date {
+  font-size: 14px;
+  color: #a3aeb9;
+}
+
+/* Loading Spinner */
+.loader {
+  border: 5px solid #f3f3f3; /* Light gray */
+  border-top: 5px solid #3182ce; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 10px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .files-list {
+    flex-direction: column; /* Stack containers vertically on smaller screens */
+    gap: 15px;
+  }
+
+  .file-section {
+    min-height: auto; /* Adjust height for smaller screens */
+  }
+}
