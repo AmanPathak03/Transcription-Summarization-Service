@@ -23,9 +23,9 @@ View and download uploaded audio files.
 Secure login for personalized access.
 Ensures all files are associated with the authenticated user.
 
-# Technology Stack 🛠
+## Technology Stack 🛠
 
-## Frontend
+### Frontend
 - **React.js:** Component-based UI.
 
 - **CSS3:** For responsive and clean UI design.
