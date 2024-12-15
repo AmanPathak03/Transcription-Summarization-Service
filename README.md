@@ -78,5 +78,5 @@ For any queries or feedback, please contact:
 
 <a href='https://x.com/AmanPathak1612' target="_blank"><img alt='X' src='https://img.shields.io/badge/Twitter-100000?style=flat&logo=X&logoColor=FFFFFF&labelColor=000000&color=000000'/></a>
 
-<a href="mailto:pathakamaniaf2003@gmail.com" target="_blank"><img alt="Email" src="https://img.shields.io/badge/Email-Contact%20Me-green? style=flat&logo=gmail&logoColor=FFFFFF&labelColor=000000&color=000000"/></a>
+<a href="mailto:pathakamaniaf2003@gmail.com" target="_blank"><img alt="Email" src="https://img.shields.io/badge/Email-green? style=flat&logo=gmail&logoColor=FFFFFF&labelColor=000000&color=000000"/></a>
 
