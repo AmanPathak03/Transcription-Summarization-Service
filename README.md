@@ -32,16 +32,16 @@ Ensures all files are associated with the authenticated user.
 
 - **Vite:** For fast and optimized frontend development.
 
-## Backend
+### Backend
 - **FastAPI:** Handles API requests for audio upload, transcription, and summarization.
 
 - **MongoDB:** Stores User data, Transcriptions, Summaries & Audio files.
 
-## APIs and Libraries
+### APIs and Libraries
 - **Google Speech-To-Text:** To convert audio into textual representation.
 - **Hugging Face:** To generate concise summaries of the transcribed text.
 
-# Usage 📝
+## Usage 📝
 - **Register/Login:**
 Log in using your credentials to access your files.
 
@@ -56,14 +56,14 @@ Download audio files or transcriptions using the Download button.
 Access generated transcriptions with timestamps.
 View summaries for a quick overview.
 
-# Screenshots 📸
+## Screenshots 📸
 Audio Files Section
 
 Transcriptions Section
 
 Summaries Section
 
-# Contact 📧
+## Contact 📧
 For any queries or feedback, please contact:
 
 **Aman Pathak**
