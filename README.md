@@ -35,11 +35,11 @@ Ensures all files are associated with the authenticated user.
 ## Backend
 - **FastAPI:** Handles API requests for audio upload, transcription, and summarization.
 
-- **MongoDB:** Stores user data, transcriptions, and summaries.
+- **MongoDB:** Stores User data, Transcriptions, Summaries & Audio files.
 
 ## APIs and Libraries
-- OpenAI GPT-4o Mini API: Generates transcriptions and summaries.
-- Google Cloud Storage: Manages and serves uploaded audio files.
+- **Google Speech-To-Text:** To convert audio into textual representation.
+- **Hugging Face:** To generate concise summaries of the transcribed text.
 
 # Usage 📝
 - **Register/Login:**
