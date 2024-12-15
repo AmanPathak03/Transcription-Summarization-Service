@@ -40,6 +40,7 @@ Ensures all files are associated with the authenticated user.
 ### APIs and Libraries
 - **Google Speech-To-Text:** To convert audio into textual representation.
 - **Hugging Face:** To generate concise summaries of the transcribed text.
+  
 
 ## Usage 📝
 - **Register/Login:**
