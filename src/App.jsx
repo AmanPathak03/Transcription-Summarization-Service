@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './components/AuthContext';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
-import Sidebar from './Components/Sidebar/Sidebar';
-import Main from './Components/Main/Main';
+import Sidebar from './components/Sidebar/Sidebar';
+import Main from './components/Main/Main';
 import Files from './components/Files/FIles'; // Adjust case to match the actual file name
 import './App.css';
 
