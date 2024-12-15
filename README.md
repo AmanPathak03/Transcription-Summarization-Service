@@ -27,7 +27,9 @@ Ensures all files are associated with the authenticated user.
 
 ## Frontend
 -React.js: Component-based UI.
+
 -CSS3: For responsive and clean UI design.
+
 -Vite: For fast and optimized frontend development.
 
 ## Backend
