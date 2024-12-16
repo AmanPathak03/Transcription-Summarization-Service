@@ -14,7 +14,7 @@ const ProtectedRoute = ({ children }) => {
 
   // Redirect unauthenticated users to the login page
   if (!isAuthenticated) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/Login" />;
   }
 
   return children;
@@ -52,7 +52,7 @@ const AppWrapper = () => {
   useEffect(() => {
     // If the user is authenticated and trying to access login or signup,
     // redirect them to the main page
-    if (isAuthenticated && (location.pathname === '/login' || location.pathname === '/signup')) {
+    if (isAuthenticated && (location.pathname === '/Login' || location.pathname === '/Signup')) {
       navigate('/', { replace: true });
     }
   }, [isAuthenticated, location.pathname, navigate]);
@@ -62,8 +62,8 @@ const AppWrapper = () => {
       <BrowserRouter>
         <Routes>
           {/* Public Routes */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
 
           {/* Protected Routes */}
           <Route
