@@ -3,30 +3,37 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './components/AuthContext';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
-import Sidebar from './components/Sidebar/Sidebar';
+import Sidebar from './components/Sidebar/Sidebar.jsx';
 import Main from './components/Main/Main';
-import Files from './components/Files/FIles'; // Adjust case to match the actual file name
+import Files from './components/Files/FIles.jsx'; // Ensure this matches the actual filename
 import './App.css';
 
-const App = () => {
+const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useAuth();
+
+  // Redirect unauthenticated users to the login page
+  if (!isAuthenticated) {
+    return <Navigate to="/login" />;
+  }
+
+  return children;
+};
+
+const App = () => {
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
 
   const toggleSidebar = () => setIsSidebarExpanded(!isSidebarExpanded);
 
-  if (!isAuthenticated) {
-    // Redirect unauthenticated users to the login page
-    return <Navigate to="/login" />;
-  }
-
   return (
     <div className={`app-container ${isSidebarExpanded ? 'expanded' : ''}`}>
       <Sidebar isExpanded={isSidebarExpanded} toggleSidebar={toggleSidebar} />
-      <Main isExpanded={isSidebarExpanded} />
-      <Routes>
-        <Route path="/FIles" element={<Files />} />
-        {/* Add more routes as needed */}
-      </Routes>
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<Main isExpanded={isSidebarExpanded} />} />
+          <Route path="/files" element={<FIles />} />
+          {/* Add more routes as needed */}
+        </Routes>
+      </div>
     </div>
   );
 };
@@ -36,12 +43,19 @@ const AppWrapper = () => {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Signup" element={<Signup />} />
-          <Route path="/Main" element={<Main />} />
-          <Route path="/FIles" element={<Files />} />
-          {/* Protected routes */}
-          <Route path="/*" element={<App />} />
+          {/* Public Routes */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+
+          {/* Protected Routes */}
+          <Route
+            path="/*"
+            element={
+              <ProtectedRoute>
+                <App />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
