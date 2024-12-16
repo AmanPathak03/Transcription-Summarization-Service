@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './components/AuthContext';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
-import Sidebar from './components/Sidebar/Sidebar.jsx';
 import Main from './components/Main/Main';
+import Sidebar from './components/Sidebar/Sidebar.jsx';
 import Files from './components/Files/FIles.jsx'; // Ensure this matches the actual filename
 import './App.css';
 
@@ -29,13 +29,12 @@ const App = () => {
   return (
     <div className="app-container">
       {/* Sidebar */}
-      
+      <Sidebar isExpanded={isSidebarExpanded} toggleSidebar={toggleSidebar} />
       
       {/* Main content */}
       <div className="main-content">
         <Routes>
           {/* Default route */}
-          <Sidebar isExpanded={isSidebarExpanded} toggleSidebar={toggleSidebar} />
           <Route path="/" element={<Main isExpanded={isSidebarExpanded} />} />
           <Route path="/files" element={<Files />} />
           {/* Add additional protected routes here */}
