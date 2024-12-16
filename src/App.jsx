@@ -29,12 +29,13 @@ const App = () => {
   return (
     <div className="app-container">
       {/* Sidebar */}
-      <Sidebar isExpanded={isSidebarExpanded} toggleSidebar={toggleSidebar} />
+      
       
       {/* Main content */}
       <div className="main-content">
         <Routes>
           {/* Default route */}
+          <Sidebar isExpanded={isSidebarExpanded} toggleSidebar={toggleSidebar} />
           <Route path="/" element={<Main isExpanded={isSidebarExpanded} />} />
           <Route path="/files" element={<Files />} />
           {/* Add additional protected routes here */}
