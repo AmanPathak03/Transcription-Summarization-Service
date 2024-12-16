@@ -65,3 +65,13 @@
   margin-left: 10px;
   color: #4d4b56;
 }
+
+.logout {
+  cursor: pointer;
+  color: red;
+}
+
+.logout:hover {
+  color: darkred;
+}
+
