@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 const firebaseConfig = {
-  apiKey: "AIzaSyAVx5u0uhvFpSLDTmD8Mg_xCkl15rx9ZLs",
+  apiKey: "APIKEY",
   authDomain: "authentication-38502.firebaseapp.com",
   projectId: "authentication-38502",
   storageBucket: "authentication-38502.firebasestorage.app",
