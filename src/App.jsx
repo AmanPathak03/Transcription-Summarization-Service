@@ -54,6 +54,7 @@ const AppWrapper = () => {
           {/* Public Routes */}
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
+          <Route path="/FIles" element={<Files />} />
 
           {/* Protected Routes */}
           <Route
