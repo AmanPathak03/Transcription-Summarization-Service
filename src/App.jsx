@@ -31,7 +31,7 @@ const App = () => {
       <Sidebar isExpanded={isSidebarExpanded} toggleSidebar={toggleSidebar} />
       <div className="main-content">
         <Routes>
-          <Route path="/" element={<Main isExpanded={isSidebarExpanded} />} />
+          <Route path="/Main" element={<Main isExpanded={isSidebarExpanded} />} />
           <Route path="/FIles" element={<Files />} />
           {/* Add additional protected routes here */}
         </Routes>
