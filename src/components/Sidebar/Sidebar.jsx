@@ -1,21 +1,25 @@
-// Sidebar.jsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { assets } from '../../Assets/assets'; 
 import './Sidebar.css'; 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../AuthContext'; // Import the AuthContext hook
 
 const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  
+  const { logout } = useAuth(); // Access the logout function from AuthContext
+  const navigate = useNavigate(); // For navigating programmatically
 
   const links = [
-    { label: 'Home', icon: assets.home_icon, href: '#' },
-    { label: 'Profile', icon: assets.profile_icon, href: '#' },
+    { label: 'Home', icon: assets.home_icon, href: '/' },
+    { label: 'Profile', icon: assets.profile_icon, href: '/profile' },
     { label: 'Files', icon: assets.files_icon, href: '/FIles' },
-    // { label: 'Settings', icon: assets.setting_icon, href: '#' },
-    { label: 'Logout', icon: assets.logout_icon, href: '#' },
   ];
+
+  const handleLogout = () => {
+    logout(); // Call the logout function to clear authentication
+    navigate('/login'); // Redirect to the login page
+  };
 
   return (
     <motion.div
@@ -33,6 +37,14 @@ const Sidebar = () => {
             {isExpanded && <span className="menu-text">{link.label}</span>}
           </Link>
         ))}
+        {/* Logout Button */}
+        <div
+          className="menu-item logout"
+          onClick={handleLogout} // Handle logout on click
+        >
+          <img src={assets.logout_icon} alt="Logout icon" className="icon" />
+          {isExpanded && <span className="menu-text">Logout</span>}
+        </div>
       </div>
 
       {/* Profile Section */}
