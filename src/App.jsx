@@ -14,7 +14,7 @@ const ProtectedRoute = ({ children }) => {
 
   // Redirect unauthenticated users to the login page
   if (!isAuthenticated) {
-    return <Navigate to="/Login" />;
+    return <Navigate to="/login" />;
   }
 
   return children;
@@ -62,8 +62,8 @@ const AppWrapper = () => {
       <BrowserRouter>
         <Routes>
           {/* Public Routes */}
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
 
           {/* Protected Routes */}
           <Route
