@@ -22,6 +22,7 @@ const ProtectedRoute = ({ children }) => {
 
 // Main application layout with sidebar
 const App = () => {
+  
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
 
   const toggleSidebar = () => setIsSidebarExpanded(!isSidebarExpanded);
