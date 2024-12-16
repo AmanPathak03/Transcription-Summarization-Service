@@ -27,12 +27,16 @@ const App = () => {
   const toggleSidebar = () => setIsSidebarExpanded(!isSidebarExpanded);
 
   return (
-    <div className={`app-container ${isSidebarExpanded ? 'expanded' : ''}`}>
+    <div className="app-container">
+      {/* Sidebar */}
       <Sidebar isExpanded={isSidebarExpanded} toggleSidebar={toggleSidebar} />
+      
+      {/* Main content */}
       <div className="main-content">
         <Routes>
-          <Route path="/Main" element={<Main isExpanded={isSidebarExpanded} />} />
-          <Route path="/FIles" element={<Files />} />
+          {/* Default route */}
+          <Route path="/" element={<Main isExpanded={isSidebarExpanded} />} />
+          <Route path="/files" element={<Files />} />
           {/* Add additional protected routes here */}
         </Routes>
       </div>
@@ -66,6 +70,7 @@ const AppWrapper = () => {
     </AuthProvider>
   );
 };
+
 
 export default AppWrapper;
 
