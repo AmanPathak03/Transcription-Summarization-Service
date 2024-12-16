@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './components/AuthContext';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
@@ -14,7 +14,7 @@ const ProtectedRoute = ({ children }) => {
 
   // Redirect unauthenticated users to the login page
   if (!isAuthenticated) {
-    return <Navigate to="/Login" />;
+    return <Navigate to="/login" />;
   }
 
   return children;
@@ -22,7 +22,9 @@ const ProtectedRoute = ({ children }) => {
 
 // Main application layout with sidebar
 const App = () => {
+  
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
+
   const toggleSidebar = () => setIsSidebarExpanded(!isSidebarExpanded);
 
   return (
@@ -35,7 +37,7 @@ const App = () => {
         <Routes>
           {/* Default route */}
           <Route path="/" element={<Main isExpanded={isSidebarExpanded} />} />
-          <Route path="/FIles" element={<Files />} />
+          <Route path="/files" element={<Files />} />
           {/* Add additional protected routes here */}
         </Routes>
       </div>
@@ -45,25 +47,13 @@ const App = () => {
 
 // Application wrapper with routing setup
 const AppWrapper = () => {
-  const { isAuthenticated } = useAuth();
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    // If the user is authenticated and trying to access login or signup,
-    // redirect them to the main page
-    if (isAuthenticated && (location.pathname === '/Login' || location.pathname === '/Signup')) {
-      navigate('/', { replace: true });
-    }
-  }, [isAuthenticated, location.pathname, navigate]);
-
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
           {/* Public Routes */}
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
 
           {/* Protected Routes */}
           <Route
@@ -81,5 +71,6 @@ const AppWrapper = () => {
     </AuthProvider>
   );
 };
+
 
 export default AppWrapper;
