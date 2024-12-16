@@ -37,7 +37,7 @@ const App = () => {
         <Routes>
           {/* Default route */}
           <Route path="/" element={<Main isExpanded={isSidebarExpanded} />} />
-          <Route path="/files" element={<Files />} />
+          <Route path="/FIles" element={<Files />} />
           {/* Add additional protected routes here */}
         </Routes>
       </div>
@@ -52,8 +52,8 @@ const AppWrapper = () => {
       <BrowserRouter>
         <Routes>
           {/* Public Routes */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
 
           {/* Protected Routes */}
           <Route
