@@ -30,7 +30,7 @@ const App = () => {
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Main isExpanded={isSidebarExpanded} />} />
-          <Route path="/files" element={<FIles />} />
+          <Route path="/FIles" element={<Files />} />
           {/* Add more routes as needed */}
         </Routes>
       </div>
