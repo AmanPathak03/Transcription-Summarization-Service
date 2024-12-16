@@ -8,6 +8,7 @@ import Main from './components/Main/Main';
 import Files from './components/Files/FIles.jsx'; // Ensure this matches the actual filename
 import './App.css';
 
+// Component for handling protected routes
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useAuth();
 
@@ -19,6 +20,7 @@ const ProtectedRoute = ({ children }) => {
   return children;
 };
 
+// Main application layout with sidebar
 const App = () => {
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
 
@@ -30,14 +32,15 @@ const App = () => {
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Main isExpanded={isSidebarExpanded} />} />
-          <Route path="/FIles" element={<Files />} />
-          {/* Add more routes as needed */}
+          <Route path="/files" element={<Files />} />
+          {/* Add additional protected routes here */}
         </Routes>
       </div>
     </div>
   );
 };
 
+// Application wrapper with routing setup
 const AppWrapper = () => {
   return (
     <AuthProvider>
@@ -56,6 +59,8 @@ const AppWrapper = () => {
               </ProtectedRoute>
             }
           />
+          {/* Fallback Route for undefined paths */}
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
@@ -63,3 +68,5 @@ const AppWrapper = () => {
 };
 
 export default AppWrapper;
+
+
